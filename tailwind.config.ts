@@ -1,4 +1,17 @@
 import type { Config } from 'tailwindcss'
+// @ts-expect-error: not typed
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
+
+function addVariablesForColors({ addBase, theme }: any) {
+  const allColors: Record<string, string> = flattenColorPalette(theme('colors'))
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  )
+
+  addBase({
+    ':root': newVars,
+  })
+}
 
 const config: Config = {
   content: [
@@ -53,7 +66,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // rest of the code
+    addVariablesForColors,
+  ],
 }
 
 export default config
