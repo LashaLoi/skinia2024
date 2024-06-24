@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import {
@@ -12,6 +12,7 @@ import {
 
 import { cn } from '@/app/lib/utils'
 import { Button } from '@/app/lib/ui/button'
+import { usePathname } from 'next/navigation'
 
 export const Navbar = ({
   navItems,
@@ -32,6 +33,12 @@ export const Navbar = ({
 
     setVisible(direction < 0)
   })
+
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setVisible(true)
+  }, [pathname])
 
   return (
     <AnimatePresence mode="wait">
@@ -64,7 +71,9 @@ export const Navbar = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <Button>Регистрация</Button>
+        <Link href="/register">
+          <Button>Регистрация</Button>
+        </Link>
       </motion.div>
     </AnimatePresence>
   )

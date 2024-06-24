@@ -9,7 +9,7 @@ import { BackgroundGradientAnimation } from '@/app/lib/ui/background-gradient-an
 export default function Hero() {
   return (
     <BackgroundGradientAnimation>
-      <div className="absolute z-50 inset-0 flex flex-col items-center justify-center text-white font-bold px-4 pointer-events-none text-center ">
+      <div className="absolute z-50 inset-0 flex flex-col items-center justify-center text-white font-bold px-4 pointer-events-none text-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -22,7 +22,7 @@ export default function Hero() {
           transition={{
             duration: 0.6,
           }}
-          className="sm:h-[430px] sm:w-[550px] h-[300px] w-[380px]"
+          className="sm:h-[430px] sm:w-[550px] h-[300px] w-[380px] p-4"
         >
           <Image alt="logo" src="/tb.png" height={430} width={550} />
         </motion.div>
