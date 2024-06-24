@@ -1,13 +1,11 @@
 'use client'
 
-import { useFormState, useFormStatus } from 'react-dom'
-
+import { useFormState } from 'react-dom'
 import { submitAction } from './actions'
 
-import { Button } from '@/app/lib/ui/button'
+import { Submit } from '@/app/components/ContactUs/Submit'
 
 export default function ContactUs() {
-  const status = useFormStatus()
   const [state, action] = useFormState(submitAction, null)
 
   return (
@@ -77,9 +75,7 @@ export default function ContactUs() {
               </div>
             </div>
             <div className="p-2 w-full flex justify-center">
-              <Button as="button" type="submit">
-                {status.pending ? 'Отправка' : 'Отправить'}
-              </Button>
+              <Submit />
             </div>
           </div>
         </form>

@@ -1,7 +1,5 @@
 'use server'
 
-import { redirect } from 'next/navigation'
-
 export async function registerAction(prevState: unknown, formData: FormData) {
   const result: Record<string, FormDataEntryValue> = {}
 
@@ -10,10 +8,37 @@ export async function registerAction(prevState: unknown, formData: FormData) {
   })
 
   try {
-    redirect('/registered')
-  } catch (error) {
+    const data = await fetch(
+      'https://script.google.com/macros/s/AKfycby8OmR4sWTncTTU1vxqVJ2Ewkkj5BDV_ZnEmoQFwgMbRsmemwGVjPhqBrl0XApXDX5u/exec',
+      {
+        redirect: 'follow',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify({ ...result, type: 'USERS' }),
+      },
+    )
+
+    const res = await data.text()
+
+    if (res === 'ok') {
+      return {
+        success: true,
+        error: false,
+      }
+    }
+
     return {
-      error: false,
+      success: false,
+      error: true,
+    }
+  } catch (error) {
+    console.error(error)
+
+    return {
+      success: false,
+      error: true,
     }
   }
 }
