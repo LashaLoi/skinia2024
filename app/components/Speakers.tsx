@@ -33,7 +33,7 @@ export default function Speakers() {
           <GlareCard className="flex flex-col items-center justify-center">
             <img
               className="h-full w-full absolute inset-0 object-cover"
-              src="/2-2.jpg"
+              src="/s10.jpg"
             />
           </GlareCard>
           <div className="flex justify-center items-center mt-2 text-md font-bold">
