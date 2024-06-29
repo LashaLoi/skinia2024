@@ -112,7 +112,7 @@ export default function Content() {
 
             <img
               className="w-full object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+              src="/content1.PNG"
               alt="Image Description"
             />
           </div>
@@ -124,32 +124,30 @@ export default function Content() {
           Основные направления
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
-          <div>
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
+          <div className="sm:block flex justify-start items-center gap-4">
+            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl">
               <svg
-                className="flex-shrink-0 size-6 text-blue-600 dark:text-blue-400"
+                className="flex-shrink-0 size-6 text-blue-600"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
                 <rect x="3" y="14" width="7" height="7" rx="1" />
                 <circle cx="17.5" cy="17.5" r="3.5" />
               </svg>
             </div>
-            <div className="mt-5">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-                Учение о поклонении
-              </h3>
-            </div>
+            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
+              Учение о поклонении
+            </h3>
           </div>
-          <div>
+          <div className="sm:block flex justify-start items-center gap-4">
             <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
               <svg
                 className="flex-shrink-0 size-6 text-blue-600 dark:text-blue-500"
@@ -169,13 +167,12 @@ export default function Content() {
                 <circle cx="7" cy="7" r="3" />
               </svg>
             </div>
-            <div className="mt-5">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-                Практическое применение знаний
-              </h3>
-            </div>
+
+            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
+              Практическое применение знаний
+            </h3>
           </div>
-          <div>
+          <div className="sm:block flex justify-start items-center gap-4">
             <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
               <svg
                 className="flex-shrink-0 size-6 text-blue-600 dark:text-blue-500"
@@ -193,13 +190,11 @@ export default function Content() {
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
             </div>
-            <div className="mt-5">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-                Пророческое поклонение
-              </h3>
-            </div>
+            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
+              Пророческое поклонение
+            </h3>
           </div>
-          <div>
+          <div className="sm:block flex justify-start items-center gap-4">
             <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
               <svg
                 className="flex-shrink-0 size-6 text-blue-600 dark:text-blue-500"
@@ -217,11 +212,9 @@ export default function Content() {
                 <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
               </svg>
             </div>
-            <div className="mt-5">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-                Знакомство, общение, обмен опытом
-              </h3>
-            </div>
+            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
+              Знакомство, общение, обмен опытом
+            </h3>
           </div>
         </div>
       </div>

@@ -3,42 +3,39 @@ import { InfiniteMovingCards } from '@/app/lib/ui/cards'
 const testimonials = [
   {
     quote:
-      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.',
-    name: 'Charles Dickens',
-    title: 'A Tale of Two Cities',
+      'Благодарю всех, кто организовал Скинию! ❤️ В последнее время у меня было тяжёлое состояние 😞 Но на школе я пережила Божье присутствие! 🕊Теперь снова хочется поклоняться и хвалить Бога!!!))) ✝',
+    name: 'Виталия Новикова',
+    title: '',
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: 'William Shakespeare',
-    title: 'Hamlet',
+      'Хочу выразить слова благодарности Эстере и всей команде, что организовали такое классное мероприятие - школу "Скиния"!❤️\n' +
+      'Я была впервые. Узнала о школе, увидев пост в Фейсбуке. И у меня внутри загорелось поехать туда.\n' +
+      'Это были благословенные три дня, которые произвели сразу некоторые перемены в моей жизни. Время обновления и укрепления взаимоотношений с Богом! На школе произошел крутой переворот внутри меня.🔥\n' +
+      'Спасибо! То, что вы делаете - это драгоценно!\n',
+    name: 'Ольга Ватыль',
+    title: '',
   },
   {
-    quote: 'All that we see or seem is but a dream within a dream.',
-    name: 'Edgar Allan Poe',
-    title: 'A Dream Within a Dream',
-  },
-  {
+    name: 'Кира Корегляд',
+    title: '',
     quote:
-      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
-    name: 'Jane Austen',
-    title: 'Pride and Prejudice',
-  },
-  {
-    quote:
-      'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
-    name: 'Herman Melville',
-    title: 'Moby-Dick',
+      'Хочу выразить искреннюю благодарность всем организаторам Скинии! Такие мероприятия просто жизненно необходимы (для меня так точно!)\n' +
+      'Столько мудрости, откровений и Божьего присутствия 🔥 \n' +
+      'Высококлассные команды прославления, на которые хочется равняться :)\n' +
+      '\n' +
+      'Я реально ощутила и увидела небеса на земле 🤍 Для меня Скиния снова стала временем перезагрузки и зарядки Божьей энергией для дальнейшего движения 🔥\n' +
+      'Спасибо! Слава Богу за всё!',
   },
 ]
 
 export default function Feedback() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
-        speed="slow"
+        speed="normal"
       />
     </div>
   )

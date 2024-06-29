@@ -2,7 +2,8 @@ export default function Location() {
   return (
     <>
       <h2 className="mt-10 mb-10 text-2xl font-bold text-purple-600 p-4  w-full text-center">
-        Смоленская 28 - Барановичи - Беларусь
+        Смоленская 28 <br />
+        Барановичи - Беларусь
       </h2>
       <div className="md:w-2/3 w-full relative h-[400px] mx-auto">
         <iframe
