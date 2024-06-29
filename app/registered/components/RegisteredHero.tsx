@@ -8,39 +8,35 @@ export function RegisteredHero() {
       <div className="">
         <div className="text-black flex flex-col p-4">
           <h2 className="text-2xl sm:text-4xl font-bold text-center text-purple-600 relative z-20 mt-[140px]">
-            Регистрация прошла успешно!
+            РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО!
           </h2>
-          <div className="max-w-[700px] text-lg">
-            <div className="mt-4 mb-4">
-              Команда школы не предоставляет бесплатный ночлег, если вам нужна
-              помощь в поиске жилья в аренду, свяжитесь с нами{' '}
-              <span className="text-purple-600"> +375 (29) 206-11-32 Анна</span>
-            </div>
+          <div className="max-w-[700px] text-lg gap-2 flex flex-col">
+            <div className="mt-8">Мы очень ждем тебя и хотим напомнить:</div>
             <div>
-              Приятный бонус для каждого участника - бесплатный обед! На месте
-              будет работать платное кафе
+              - мы не предоставляем бесплатный ночлег, а если вам нужна помощь в
+              поиске аренды жилья, обратитесь по номеру
+              <span className="text-purple-600 mx-1">
+                <a href="tel:+375292265835">+375292265835</a>
+              </span>
+              Эстэра
             </div>
-            <div className="mt-4 mb-4">
-              В этом году мы запускаем марафон хвалы в последний день школы!
-              Участие возможно только при условии, что вы были всю школу и всей
-              командой. Благодарим за регистрацию и до встречи!
-            </div>
-            <div className="my-4">
-              Присоединяйся к нашему Telegram-каналу, чтобы знать больше
-              подробностей о школе и не пропустить важной информации! (
+            <div>- на месте будет работать платное кафе ☕️</div>
+            <div>
+              - присоединяйтесь к нашему{' '}
               <span className="text-purple-600">
                 <a
-                  href="https://t.me/+ckIe79U-NIZkMDli"
+                  href="https://t.me/skiniaby"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  telegram
+                  Telegram-каналу
                 </a>
-              </span>
-              )
+              </span>{' '}
+              , чтобы знать больше подробностей и не пропустить важный
+              информации!
             </div>
           </div>
-          <div className="z-50 gap-8 flex items-center justify-center">
+          <div className="z-50 gap-8 flex items-center justify-center mt-4">
             <Link href="/">
               <Button>На главную</Button>
             </Link>
