@@ -7,14 +7,10 @@ export default function Content() {
         <div className="max-w-2xl">
           <div className="space-y-5 md:space-y-8">
             <div className="space-y-3">
-              <h2 className="text-2xl font-bold md:text-3xl text-purple-600 text-center">
-                О школе
+              <h2 className="text-xl font-bold md:text-3xl text-purple-600 text-center">
+                ПОКЛОНЕНИЕ - ЭТО ТО, КТО ТЫ ЕСТЬ!
               </h2>
             </div>
-
-            <p className="text-lg text-gray-800">
-              ПОКЛОНЕНИЕ - ЭТО ТО, КТО ТЫ ЕСТЬ!
-            </p>
 
             <p className="text-lg text-gray-800 dark:text-neutral-200">
               Восстановление Первой заповеди начинается с восстановления
