@@ -8,7 +8,8 @@ export default function Content() {
           <div className="space-y-5 md:space-y-8">
             <div className="space-y-3">
               <h2 className="text-xl font-bold md:text-3xl text-purple-600 text-center">
-                ПОКЛОНЕНИЕ - ЭТО ТО, КТО ТЫ ЕСТЬ!
+                <span className="text-2xl">ПОКЛОНЕНИЕ</span> <br /> ЭТО ТО, КТО
+                ТЫ ЕСТЬ!
               </h2>
             </div>
 
