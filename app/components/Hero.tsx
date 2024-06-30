@@ -26,7 +26,9 @@ export default function Hero() {
         >
           <Image alt="logo" src="/tb.png" height={430} width={550} />
         </motion.div>
+
         <div className="w-full mx-auto text-center flex flex-col justify-center items-center">
+          <p className="text-2xl max-w-[450px] p-2 font-light">24 - 26 ИЮЛЯ</p>
           <p className="text-2xl max-w-[450px] p-2 font-light">
             Господу Богу твоему поклоняйся и Ему одному служи
           </p>
