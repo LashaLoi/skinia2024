@@ -28,7 +28,9 @@ export default function Hero() {
         </motion.div>
 
         <div className="w-full mx-auto text-center flex flex-col justify-center items-center">
-          <p className="text-2xl max-w-[450px] p-2 font-light">24 - 26 ИЮЛЯ</p>
+          <p className="text-2xl max-w-[450px] p-2 font-light mt-[-70px]">
+            24 - 26 июля
+          </p>
           <p className="text-2xl max-w-[450px] p-2 font-light">
             Господу Богу твоему поклоняйся и Ему одному служи
           </p>

@@ -9,7 +9,7 @@ export default function RegisterPage() {
             <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
               Регистрация
             </h1>
-            <p className="mt-4 text-xl">24 - 26 ИЮЛЯ</p>
+            <p className="mt-4 text-xl">24 - 26 июля</p>
           </div>
 
           <div className="mt-5 max-w-3xl text-center mx-auto">
