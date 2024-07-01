@@ -7,7 +7,7 @@ export async function submitAction(prevState: unknown, formData: FormData) {
 
   try {
     const data = await fetch(
-      'https://script.google.com/macros/s/AKfycbz3prk-TME0qfKjdz47R4LE2hUOAX5NaVECqA5KA2rhagiqkFhY3BxvZ4BS9sCwhut2/exec',
+      'https://script.google.com/macros/s/AKfycbx-7ST-7WH1aLPMZLVYJTW7ZTBmiSKLNazPUf3WeokeCn2Ib3gDpq44ilGhXu49TBPE/exec',
       {
         redirect: 'follow',
         method: 'POST',
