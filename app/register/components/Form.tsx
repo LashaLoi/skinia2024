@@ -1,19 +1,58 @@
 'use client'
 
-import { useFormState } from 'react-dom'
+import { useRouter } from 'next/navigation'
 
-import { registerAction } from '@/app/register/actions'
-import { redirect } from 'next/navigation'
+import { Button } from '@/app/lib/ui/button'
 import { Error } from '@/app/register/components/Error'
-import { Submit } from '@/app/register/components/Submit'
-import { useState } from 'react'
+
+import { FormEventHandler, useRef, useState } from 'react'
 
 export function Form() {
   const [checked, setChecked] = useState(false)
-  const [state, action] = useFormState(registerAction, null)
+  const [error, setError] = useState(false)
+  const [pending, setPending] = useState(false)
+  const router = useRouter()
+  const formRef = useRef<HTMLFormElement>(null)
 
-  if (state?.success) {
-    redirect('/registered')
+  const onSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
+    event.preventDefault()
+    setPending(true)
+
+    const formData = new FormData(formRef.current!)
+    const result: Record<string, FormDataEntryValue> = {}
+
+    formData.forEach((value, key) => {
+      if (value === 'on') value = '+'
+
+      result[key] = value
+    })
+
+    try {
+      const data = await fetch(
+        'https://script.google.com/macros/s/AKfycbx-7ST-7WH1aLPMZLVYJTW7ZTBmiSKLNazPUf3WeokeCn2Ib3gDpq44ilGhXu49TBPE/exec',
+        {
+          redirect: 'follow',
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+          },
+          body: JSON.stringify({ ...result, type: 'USERS' }),
+        },
+      )
+
+      const res = await data.text()
+
+      if (res === 'ok') {
+        router.push('/registered')
+        return
+      }
+    } catch (error) {
+      console.error(error)
+
+      setError(true)
+    } finally {
+      setPending(false)
+    }
   }
 
   return (
@@ -39,8 +78,8 @@ export function Form() {
             <p>- приятные бонусы</p>
           </div>
         </div>
-        {state?.error && <Error />}
-        <form action={action} className="text-start w-full">
+        {error && <Error />}
+        <form onSubmit={onSubmit} className="text-start w-full" ref={formRef}>
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
             <div className="sm:col-span-2">
               <label className="block text-sm font-medium text-gray-900">
@@ -165,7 +204,7 @@ export function Form() {
             </div>
           </div>
           <div className="h-4" />
-          <Submit />
+          <Button>{pending ? 'Отправка...' : 'Отправить'}</Button>
         </form>
       </div>
     </div>
