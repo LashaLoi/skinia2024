@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <section className="text-gray-600 mb-4 body-font flex justify-center flex-col w-full items-center overflow-hidden">
       <div className="w-full text-center ">
-        <h2 className="text-2xl font-bold text-purple-600">Контактные лица</h2>
+        <h2 className="text-2xl font-bold text-purple-800">Контактные лица</h2>
       </div>
 
       <div className="p-4 max-w-md sm:p-8">

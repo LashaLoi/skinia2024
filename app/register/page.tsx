@@ -1,9 +1,6 @@
-import { redirect } from 'next/navigation'
 import { Form } from './components/Form'
 
 export default function RegisterPage() {
-  redirect('/')
-
   return (
     <>
       <div className="mt-10 relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
@@ -18,7 +15,7 @@ export default function RegisterPage() {
           <div className="mt-5 max-w-3xl text-center mx-auto">
             <p className="text-lg text-gray-600 dark:text-neutral-400">
               Заполните все вопросы чтобы стать участником{' '}
-              <span className="text-purple-600">СКИНИИ</span>
+              <span className="text-purple-800">СКИНИИ</span>
             </p>
           </div>
         </div>

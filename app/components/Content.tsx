@@ -7,7 +7,7 @@ export default function Content() {
         <div className="max-w-2xl">
           <div className="space-y-5 md:space-y-8">
             <div className="space-y-3">
-              <h2 className="text-xl font-bold md:text-3xl text-purple-600 text-center">
+              <h2 className="text-xl font-bold md:text-3xl text-purple-800 text-center">
                 <span className="text-2xl">ПОКЛОНЕНИЕ</span> <br /> ЭТО ТО, КТО
                 ТЫ ЕСТЬ!
               </h2>
@@ -36,12 +36,12 @@ export default function Content() {
       </div>
 
       <div className="max-w-[70rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <h2 className="text-2xl font-bold text-purple-600 p-4 w-full text-center mb-10">
+        <h2 className="text-2xl font-bold text-purple-800 p-4 w-full text-center mb-10">
           Основные направления
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
           <div className="sm:block flex justify-start items-center gap-4">
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl">
+            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-purple-800 before:rounded-xl">
               <svg
                 className="flex-shrink-0 size-6 text-blue-600"
                 xmlns="http://www.w3.org/2000/svg"

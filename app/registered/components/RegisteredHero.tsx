@@ -7,7 +7,7 @@ export function RegisteredHero() {
     <div className="min-h-screen w-full bg-white flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="">
         <div className="text-black flex flex-col p-4">
-          <h2 className="text-2xl sm:text-4xl font-bold text-center text-purple-600 relative z-20 mt-[140px]">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center text-purple-800 relative z-20 mt-[140px]">
             РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО!
           </h2>
           <div className="max-w-[700px] text-lg gap-2 flex flex-col">
@@ -15,7 +15,7 @@ export function RegisteredHero() {
             <div>
               - мы не предоставляем бесплатный ночлег, а если вам нужна помощь в
               поиске аренды жилья, обратитесь по номеру
-              <span className="text-purple-600 mx-1">
+              <span className="text-purple-800 mx-1">
                 <a href="tel:+375292265835">+375292265835</a>
               </span>
               Эстэра
@@ -23,7 +23,7 @@ export function RegisteredHero() {
             <div>- на месте будет работать платное кафе ☕️</div>
             <div>
               - присоединяйтесь к нашему{' '}
-              <span className="text-purple-600">
+              <span className="text-purple-800">
                 <a
                   href="https://t.me/skiniaby"
                   target="_blank"

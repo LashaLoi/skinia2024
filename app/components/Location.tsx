@@ -1,7 +1,7 @@
 export default function Location() {
   return (
     <>
-      <h2 className="mt-10 mb-10 text-2xl font-bold text-purple-600 p-4  w-full text-center">
+      <h2 className="mt-10 mb-10 text-2xl font-bold text-purple-800 p-4  w-full text-center">
         Смоленская 28 <br />
         Барановичи - Беларусь
       </h2>

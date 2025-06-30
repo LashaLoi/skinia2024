@@ -70,9 +70,9 @@ export const Navbar = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        {/* <Link href="/register">
+        <Link href="/register">
           <Button>Регистрация</Button>
-        </Link> */}
+        </Link>
       </motion.div>
     </AnimatePresence>
   )
