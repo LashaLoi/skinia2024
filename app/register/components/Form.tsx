@@ -29,7 +29,7 @@ export function Form() {
 
     try {
       const data = await fetch(
-        'https://script.google.com/macros/s/AKfycbx-7ST-7WH1aLPMZLVYJTW7ZTBmiSKLNazPUf3WeokeCn2Ib3gDpq44ilGhXu49TBPE/exec',
+        'https://script.google.com/macros/s/AKfycbzRLaLsRHMNRYCwSKuc_zFiM0Np1VI-Kt9-cjTOxp9xh5w5jIyJYY8JdR-N-5HpvR0l/exec',
         {
           redirect: 'follow',
           method: 'POST',
