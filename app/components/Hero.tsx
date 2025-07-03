@@ -28,10 +28,10 @@ export default function Hero() {
         </motion.div>
 
         <div className="w-full mx-auto text-center flex flex-col justify-center items-center">
-          <p className="text-2xl max-w-[450px] p-2 font-light mt-[-70px]">
+          <p className="text-2xl max-w-[450px] p-2 font-bold mt-[-70px]">
             24-26 июля
           </p>
-          <p className="text-2xl max-w-[450px] p-2 font-light">
+          <p className="text-2xl max-w-[450px] p-2 italic">
             Господу Богу твоему поклоняйся и Ему одному служи
           </p>
           <p className="mt-2 text-lg ">Матфея 4:10</p>

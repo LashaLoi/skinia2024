@@ -38,6 +38,14 @@ export function RegisteredHero() {
               , чтобы знать больше подробностей и не пропустить важной
               информации!
             </div>
+            <div className="mt-2">
+              Вы можете внести добровольное пожертвование на месте или{' '}
+              <Link href="/online">
+                <span className="text-purple-800 hover:text-purple-600">
+                  онлайн
+                </span>
+              </Link>
+            </div>
           </div>
           <div className="z-50 gap-8 flex items-center justify-center mt-4">
             <Link href="/">
