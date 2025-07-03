@@ -2,17 +2,17 @@ export default function OnlinePage() {
   return (
     <div className="min-h-screen w-full bg-white flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="p-5">
-        <h2 className="text-2xl sm:text-4xl font-bold text-purple-800 relative z-20 mb-4">
+        <h2 className="text-2xl sm:text-4xl font-bold text-purple-800 relative z-20 mb-6 mt-[100px]">
           Добровольное пожертвование
         </h2>
-        <p className="mb-6">
+        <p className="mb-4">
           В мобильном приложении любого банка выбираете вкладку{' '}
           <span className="text-purple-600">платеж</span> -{'>'}{' '}
           <span className="text-purple-600">свободный платеж</span> -{'>'}{' '}
           <span className="text-purple-600">перевод по реквизитам.</span>
         </p>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <p>
             УНП получателя - <span className={'font-bold'}>193810786</span>
           </p>
@@ -36,7 +36,7 @@ export default function OnlinePage() {
         </div>
 
         <div>
-          По окнчанию платежа, необходимо отправить фотографию{' '}
+          По окончанию платежа, необходимо отправить фотографию чека{' '}
           <a
             className="text-purple-800"
             href="https://t.me/esthervoronenko"

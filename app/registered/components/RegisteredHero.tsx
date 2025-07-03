@@ -11,7 +11,16 @@ export function RegisteredHero() {
             РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО!
           </h2>
           <div className="max-w-[700px] text-lg gap-2 flex flex-col">
-            <div className="mt-8">Мы очень ждем тебя и хотим напомнить:</div>
+            <div className="mt-8 text-lg font-bold">
+              Вы можете внести добровольное пожертвование{' '}
+              <Link href="/online">
+                <span className="text-purple-800 hover:text-purple-600">
+                  онлайн
+                </span>
+              </Link>{' '}
+              или на месте
+            </div>
+            <div className="mt-4">Мы очень ждем тебя и хотим напомнить:</div>
             <div>
               - мы <b>НЕ ПРЕДОСТАВЛЯЕМ</b> бесплатный ночлег, а если вам нужна
               помощь в поиске аренды жилья, обратитесь по номеру
@@ -37,14 +46,6 @@ export function RegisteredHero() {
               </span>{' '}
               , чтобы знать больше подробностей и не пропустить важной
               информации!
-            </div>
-            <div className="mt-2">
-              Вы можете внести добровольное пожертвование на месте или{' '}
-              <Link href="/online">
-                <span className="text-purple-800 hover:text-purple-600">
-                  онлайн
-                </span>
-              </Link>
             </div>
           </div>
           <div className="z-50 gap-8 flex items-center justify-center mt-4">
