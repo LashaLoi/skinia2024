@@ -61,7 +61,7 @@ export function Form() {
         <div className="text-gray-800 w-full ">
           <div className="text-lg my-4">
             <div className="mb-4">
-              3 дня - <b>100 рублей</b>
+              3 дня - <b>150 рублей</b>
             </div>
             <div>
               Мы вдохновляем вас быть все три дня с нами, чтобы наполниться на
@@ -71,10 +71,8 @@ export function Form() {
           <div className="mb-8">
             <h2 className="mb-2 font-bold">Что входит в эту цену?</h2>
             <p>- свободный вход на все сессии</p>
-            <p>- блокнот</p>
-            <p>- карандаш</p>
-            <p>- бейдж</p>
-            <p>- обед</p>
+            <p>- блокнот и ручка</p>
+            <p>- сэндвич утром, обед и ужин</p>
             <p>- приятные бонусы</p>
           </div>
         </div>
@@ -151,6 +149,7 @@ export function Form() {
                   <option value="Пастор">Пастор</option>
                   <option value="Помощник пастора">Помощник пастора</option>
                   <option value="Другое">Другое</option>
+                  <option value="молитвенник">Молитвенник</option>
                   <option value="Не несу служение">Не несу служение</option>
                   <option value="Не прихожанин церкви">
                     Не прихожанин церкви
@@ -169,12 +168,13 @@ export function Form() {
                 />
                 <label
                   htmlFor="bordered-checkbox-1"
-                  className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="w-full p-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Хотите ли вы представить во второй день свой творческий номер
-                  или авторский проект? <br />
-                  Возможно вы движетесь профессионально в музыкальной сфере и
-                  готовы рассказать о своей деятельности?
+                  Хотели бы вы представить всем свой творческий номер или
+                  авторский проект? (направление в служении, которым вы
+                  занимаетесь)
+                  <br />
+                  Если вы готовы рассказать о своей деятельности, напишите нам!
                 </label>
               </div>
             </div>

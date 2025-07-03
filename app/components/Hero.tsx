@@ -29,7 +29,7 @@ export default function Hero() {
 
         <div className="w-full mx-auto text-center flex flex-col justify-center items-center">
           <p className="text-2xl max-w-[450px] p-2 font-light mt-[-70px]">
-            Лето 2025
+            24-26 июля
           </p>
           <p className="text-2xl max-w-[450px] p-2 font-light">
             Господу Богу твоему поклоняйся и Ему одному служи

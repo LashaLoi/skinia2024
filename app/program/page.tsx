@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 
 const useProgram = () => {
   const [first, setFirst] = useState(false)
@@ -16,7 +16,7 @@ const useProgram = () => {
       event: [
         {
           time: '9:30',
-          title: 'кафе работает, завтраки',
+          title: 'работает кафе',
         },
         {
           time: '10:00',
@@ -64,7 +64,7 @@ const useProgram = () => {
       event: [
         {
           time: '9:30',
-          title: 'кафе работает, завтраки',
+          title: 'работает кафе',
         },
         {
           time: '10:00',
@@ -121,6 +121,8 @@ const useProgram = () => {
         {
           time: '10:00',
           title: 'хвала, поклонение и молитва',
+          description:
+            'На марафон хвалы вход доступен только участникам Скинии!',
         },
         {
           time: '18:00',
@@ -191,17 +193,25 @@ export default function ProgramPage() {
                   <div className="flow-root max-w-3xl mx-auto mt-8 sm:mt-12 lg:mt-16">
                     <div className="-my-4 divide-y divide-gray-200 ">
                       {day.event.map((event, i) => (
-                        <div
-                          key={event.title + i}
-                          className="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center"
-                        >
-                          <p className="w-32 text-lg font-normal text-gray-500 sm:text-right  shrink-0">
-                            {event.time}
-                          </p>
-                          <h3 className="text-lg font-semibold text-gray-900 ">
-                            {event.title}
-                          </h3>
-                        </div>
+                        <Fragment key={event.title + i}>
+                          <div className="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                            <p className="w-32 text-lg font-normal text-gray-500 sm:text-right  shrink-0">
+                              {event.time}
+                            </p>
+                            {event.description ? (
+                              <div>
+                                <h3 className="text-lg font-semibold text-gray-900 ">
+                                  {event.title}
+                                </h3>
+                                <p>{event.description}</p>
+                              </div>
+                            ) : (
+                              <h3 className="text-lg font-semibold text-gray-900 ">
+                                {event.title}
+                              </h3>
+                            )}
+                          </div>
+                        </Fragment>
                       ))}
                     </div>
                   </div>
