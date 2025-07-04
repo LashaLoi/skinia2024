@@ -204,7 +204,10 @@ export function Form() {
             </div>
           </div>
           <div className="h-4" />
-          <Button>{pending ? 'Отправка...' : 'Отправить'}</Button>
+          {/*@ts-expect-error*/}
+          <Button disabled={pending}>
+            {pending ? 'Отправка...' : 'Отправить'}
+          </Button>
         </form>
       </div>
     </div>

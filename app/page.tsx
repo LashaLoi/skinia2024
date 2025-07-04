@@ -4,7 +4,6 @@ import ContactUs from '@/app/components/ContactUs'
 import Footer from '@/app/components/Footer'
 import Location from '@/app/components/Location'
 import Speakers from '@/app/components/Speakers'
-import Feedback from '@/app/components/Feedback'
 
 export default function HomePage() {
   return (
@@ -12,7 +11,6 @@ export default function HomePage() {
       <Hero />
       <Content />
       <Speakers />
-      <Feedback />
       <Location />
       <ContactUs />
       <Footer />

@@ -1,4 +1,46 @@
 import React from 'react'
+import { GlowingEffect } from '@/app/components/GridItem'
+import { Book, BicepsFlexed, Rainbow, MessageCircle } from 'lucide-react'
+
+interface GridItemProps {
+  area?: string
+  icon: React.ReactNode
+  title: string
+  description?: React.ReactNode
+}
+
+const GridItem = ({ area, icon, title, description }: GridItemProps) => {
+  return (
+    <li className={`min-h-[5rem] sm:w-fit w-full list-none ${area}`}>
+      <div className="relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+        <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-2 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            <div className="w-fit rounded-lg border border-gray-600 p-2">
+              {icon}
+            </div>
+            <div className="space-y-3">
+              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
+                {title}
+              </h3>
+              {description && (
+                <h2 className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+                  {description}
+                </h2>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  )
+}
 
 export default function Content() {
   return (
@@ -39,100 +81,33 @@ export default function Content() {
         <h2 className="text-2xl font-bold text-purple-800 p-4 w-full text-center mb-10">
           Основные направления
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
-          <div className="sm:block flex justify-start items-center gap-4">
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-purple-800 before:rounded-xl">
-              <svg
-                className="flex-shrink-0 size-6 text-blue-600"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
-                <rect x="3" y="14" width="7" height="7" rx="1" />
-                <circle cx="17.5" cy="17.5" r="3.5" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
-              Учение о поклонении
-            </h3>
-          </div>
-          <div className="sm:block flex justify-start items-center gap-4">
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
-              <svg
-                className="flex-shrink-0 size-6 text-blue-600 dark:text-blue-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M20 7h-9" />
-                <path d="M14 17H5" />
-                <circle cx="17" cy="17" r="3" />
-                <circle cx="7" cy="7" r="3" />
-              </svg>
-            </div>
+        <ul className="flex flex-wrap justify-center gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+          <GridItem
+            icon={<Book className="h-4 w-4 text-black dark:text-neutral-400" />}
+            title="Учение о поклонении"
+          />
 
-            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
-              Практическое применение знаний
-            </h3>
-          </div>
-          <div className="sm:block flex justify-start items-center gap-4">
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
-              <svg
-                className="flex-shrink-0 size-6 text-blue-600 dark:text-blue-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
-              Пророческое поклонение
-            </h3>
-          </div>
-          <div className="sm:block flex justify-start items-center gap-4">
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
-              <svg
-                className="flex-shrink-0 size-6 text-blue-600 dark:text-blue-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
-                <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 sm:mt-5">
-              Знакомство, общение, обмен опытом
-            </h3>
-          </div>
-        </div>
+          <GridItem
+            icon={
+              <BicepsFlexed className="h-4 w-4 text-black dark:text-neutral-400" />
+            }
+            title="Практическое применение знаний"
+          />
+
+          <GridItem
+            icon={
+              <Rainbow className="h-4 w-4 text-black dark:text-neutral-400" />
+            }
+            title="Пророческое поклонение"
+          />
+
+          <GridItem
+            icon={
+              <MessageCircle className="h-4 w-4 text-black dark:text-neutral-400" />
+            }
+            title="  Знакомство, общение, обмен опытом"
+          />
+        </ul>
       </div>
     </>
   )
