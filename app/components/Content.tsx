@@ -2,6 +2,8 @@ import React from 'react'
 import { GlowingEffect } from '@/app/components/GridItem'
 import { Book, BicepsFlexed, Rainbow, MessageCircle } from 'lucide-react'
 
+import { list, put } from '@vercel/blob'
+
 interface GridItemProps {
   area?: string
   icon: React.ReactNode
@@ -42,7 +44,13 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
   )
 }
 
-export default function Content() {
+export default async function Content() {
+  const { blobs } = await list({
+    prefix: 'skiniavideo-hq7HVhkU0bpvmII2FM3xxAyhgBptni.MOV',
+    limit: 1,
+  })
+  const { url } = blobs[0]
+
   return (
     <>
       <div className="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
@@ -68,11 +76,10 @@ export default function Content() {
               СКИНИЯ - это начало твоего преображения!
             </p>
 
-            <img
-              className="w-full object-cover rounded-xl"
-              src="/content1.PNG"
-              alt="Image Description"
-            />
+            <video className="w-full" autoPlay muted controls preload="none">
+              <source src={url} type="video/mp4" />
+              Ваш браузер не поддерживает видео
+            </video>
           </div>
         </div>
       </div>
