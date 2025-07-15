@@ -60,12 +60,16 @@ export function Form() {
       <div className="flex flex-col max-w-[700px] w-full">
         <div className="text-gray-800 w-full ">
           <div className="text-lg my-4">
-            <div className="mb-4">
+            <div className="mb-6">
               3 дня - <b>150 рублей</b>
             </div>
-            <div>
-              Мы вдохновляем вас быть все три дня с нами, чтобы наполниться на
-              100% и не пропустить ничего важного!
+            <div className={'mb-6'}>
+              <b>ВАЖНО:</b>
+              <br />
+              регистрация на школу подразумевает ваше присутствие все 3 дня!
+              марафон хвалы в последний день проходит в рамках Скинии, для тех,
+              кто был от начала, поэтому мы вдохновляем вас быть с нами все дни!
+              <p className={'mt-2'}>C уважением команда организаторов</p>
             </div>
           </div>
           <div className="mb-8">
