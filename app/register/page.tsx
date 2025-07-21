@@ -1,7 +1,10 @@
 import { Form } from './components/Form'
 import { BackgroundLines } from '@/app/components/BackgroundLines'
+import { redirect } from 'next/navigation'
 
 export default function RegisterPage() {
+  redirect('/')
+
   return (
     <>
       <div className="mt-10 relative overflow-hidden before:absolute before:top-0 before:start-1/2  before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
