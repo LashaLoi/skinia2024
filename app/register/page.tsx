@@ -15,7 +15,7 @@ export default function RegisterPage() {
                 Регистрация
               </h1>
             </BackgroundLines>
-            <p className="mt-4 text-xl">24-26 июля</p>
+            {/* <p className="mt-4 text-xl">24-26 июля</p> */}
           </div>
 
           <div className="mt-5 max-w-3xl text-center mx-auto">
